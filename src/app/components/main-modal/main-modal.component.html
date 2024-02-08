@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="main-modal" [ngClass]="{'home': isRouteActive('/home')}">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<app-tell-more-button *ngIf="showTellMeMoreButton"></app-tell-more-button>
+<app-accents></app-accents>

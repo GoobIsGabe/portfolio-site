@@ -1,0 +1,84 @@
+.container{
+    max-width: calc(45% + 10px);
+    display: block;
+    text-align: center;
+    margin: auto;
+    position: relative;
+}
+
+.home{
+    background-color: white;
+    padding-bottom: 10px;
+    margin-top: 25%;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 50px 15px #d9d9d9;
+    max-height: 70vh;
+    overflow-y: scroll; 
+}
+
+.main-modal{
+    background-color: white;
+    padding-bottom: 10px;
+    margin-top: 25%;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 50px 15px #d9d9d9;
+    max-height: 70vh;
+    overflow-y: scroll; 
+    
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.main-modal::-webkit-scrollbar {
+    width: 10px;
+    margin-right: 10px;
+}
+
+.main-modal::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(180deg, #888888 0%, #1e1e1e 99%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+    border-radius: 100px;
+    border: 6px solid rgba(0, 0, 0, 0.2);
+}
+
+.main-modal::-webkit-scrollbar-track {
+    display: none;
+}
+
+/* Media Query for desktop appearance */
+@media (max-width: 1100px) {
+    .container {
+        // max-width: 100%;
+        max-width: calc(65% + 10px);
+    }
+}
+
+/* Media Query for iPad */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .main-modal {
+        margin-top: 25%; 
+        border-radius: unset;
+        outline: 10px solid white;
+    }
+}
+
+/* Media Query for phones */
+@media (max-width: 500px) {
+    .container {
+    }
+
+    .main-modal {
+        margin-top: 20%; 
+        border-radius: unset;
+        max-height: 80vh;
+        background-color: #fff;
+    }
+    .home{
+        margin-top: 40%; 
+    }
+}

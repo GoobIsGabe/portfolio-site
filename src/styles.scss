@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'CoreMellow77CnExtraBoldW05-It';
+    src: url('assets/fonts/CoreMellow77CnExtraBoldW05-It.ttf');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'CoreMellow37CnLightW05-Rg';
+    src: url('assets/fonts/CoreMellow37CnLightW05-Rg.ttf');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'CoreMellowW01-79CmXBold';
+    src: url('assets/fonts/CoreMellowW01-79CmXBold.ttf');
+    font-display: swap;
+  }
+
+body{
+    background-color: rgb(46, 46, 46);
+}

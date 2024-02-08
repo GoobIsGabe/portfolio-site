@@ -1,0 +1,21 @@
+<!-- 
+    this is what the fade/gradient would  be as well as 
+    the lines on the bottom of the page
+    Z-Index should be important here
+-->
+
+<div class="gradient-fade">
+
+</div>
+
+<div class="lines">
+    <div class="line1"
+        [ngClass]="{'cyan': isRouteActive('/development'), 'yellow': isRouteActive('/photography'), 'magenta': isRouteActive('/content')}">
+    </div>
+    <div class="line2"
+        [ngClass]="{'cyan': isRouteActive('/development'), 'yellow': isRouteActive('/photography'), 'magenta': isRouteActive('/content')}">
+    </div>
+    <div class="line3"
+        [ngClass]="{'cyan': isRouteActive('/development'), 'yellow': isRouteActive('/photography'), 'magenta': isRouteActive('/content')}">
+    </div>
+</div>

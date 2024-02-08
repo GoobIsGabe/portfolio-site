@@ -1,0 +1,125 @@
+
+.container {
+  max-width: 45%;
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+.name-heading {
+  font-family: "CoreMellow77CnExtraBoldW05-It", sans-serif !important;
+  font-size: 3.5em;
+  margin-bottom: -25px;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 2px #000;
+}
+.sub-headers {
+  font-size: 3em;
+  -webkit-text-stroke: 1px #00000088;
+  margin-bottom: 0px;
+  .satin {
+  }
+  span {
+    display: block;
+    a {
+      text-decoration: none;
+    }
+  }
+  font-family: "CoreMellow37CnLightW05-Rg", sans-serif !important;
+}
+.cyan {
+  -webkit-text-fill-color: cyan;
+  :visited {
+    -webkit-text-fill-color: cyan;
+  }
+}
+.magenta {
+  -webkit-text-fill-color: magenta;
+  :visited{
+    -webkit-text-fill-color: magenta;
+}
+}
+.yellow {
+  -webkit-text-fill-color: yellow;
+  :visited{
+    -webkit-text-fill-color: yellow;
+}
+}
+
+.arrow {
+  display: inline;
+  font-size: 0.5em;
+  position: relative;
+  top: -5px;
+}
+
+.more-button {
+  margin: auto;
+  max-width: 30%;
+  min-width: 20%;
+  min-height: 75px;
+  border-radius: 25px;
+  background-color: white;
+  position: fixed;
+  left: 40%;
+  top: 60%;
+}
+
+.button {
+  font-family: "CoreMellow77CnExtraBoldW05-It", sans-serif !important;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 2px #000;
+  border-radius: 4px;
+  background: none;
+  border: none;
+  text-align: center;
+  font-size: 28px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button span {
+  padding-top: 15px;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  padding-top: 15px;
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Media Query for desktop appearance */
+@media (max-width: 1100px) {
+
+}
+
+/* Media Query for iPad */
+@media (max-width: 768px) {
+
+}
+
+/* Media Query for phones */
+@media (max-width: 500px) {
+.name-heading{
+  font-size: 2.75em;
+}
+.sub-headers{
+  font-size: 2em;
+}
+}

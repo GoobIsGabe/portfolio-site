@@ -1,0 +1,70 @@
+.button {
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: auto;
+    padding-top: 20px;
+}
+button{
+    font-family: "CoreMellow77CnExtraBoldW05-It", sans-serif !important;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 2px #000;
+    border-radius: 4px;
+    background: none;
+    border: none;
+    text-align: center;
+    font-size: 28px;
+    width: 25%;
+}
+.button span {
+    padding-top: 15px;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    padding-top: 15px;
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.more-button {
+    margin: auto;
+    min-height: 75px;
+    border-radius: 25px;
+    background-color: white;
+}
+
+
+/* Media Query for desktop appearance */
+@media (max-width: 1100px) {
+
+}
+
+/* Media Query for iPad */
+@media (max-width: 768px) {
+button{
+    width: 50%;
+}
+}
+
+/* Media Query for phones */
+@media (max-width: 500px) {
+    button{
+        width: 75%;
+    }
+}
