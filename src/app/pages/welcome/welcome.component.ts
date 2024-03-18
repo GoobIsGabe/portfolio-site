@@ -10,4 +10,14 @@ export class WelcomeComponent {
   constructor(private router: Router) {
     // this.router.navigate(['/development'], { replaceUrl: true });
   }
+  isPopoverVisible: boolean = false;
+
+  showPopover() {
+    this.isPopoverVisible = true;
+  }
+
+  hidePopover() {
+    this.isPopoverVisible = false;
+  }
+  
 }

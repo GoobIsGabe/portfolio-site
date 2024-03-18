@@ -1,11 +1,12 @@
 .button {
     text-align: center;
-    transition: all 0.5s;
-    cursor: pointer;
     margin: auto;
     padding-top: 20px;
+    animation: modal-load 630ms;
+    
 }
 button{
+    transition: all 0.5s;
     font-family: "CoreMellow77CnExtraBoldW05-It", sans-serif !important;
     -webkit-text-fill-color: white;
     -webkit-text-stroke: 2px #000;
@@ -15,6 +16,7 @@ button{
     text-align: center;
     font-size: 28px;
     width: 25%;
+    cursor: pointer;
 }
 .button span {
     padding-top: 15px;
@@ -33,11 +35,11 @@ button{
     transition: 0.5s;
 }
 
-.button:hover span {
+button:hover span {
     padding-right: 25px;
 }
 
-.button:hover span:after {
+button:hover span:after {
     opacity: 1;
     right: 0;
 }
@@ -66,5 +68,14 @@ button{
 @media (max-width: 500px) {
     button{
         width: 75%;
+    }
+}
+
+@keyframes modal-load {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
     }
 }

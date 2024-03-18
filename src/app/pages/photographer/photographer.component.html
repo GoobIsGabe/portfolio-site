@@ -1,6 +1,30 @@
+<div class="back">
+  <h1><a routerLink="/home" title="Go Back">&#171;</a></h1>
+</div>
 <h1 class="name-heading">
-    <span class="yellow">Photography</span>
+  <span class="yellow">Other Works</span>
 </h1>
 <h2 class="sub-headers">
-    <span class="satin">Under Construction</span>
+  <!-- This would need to have its own collection loop for each collection -->
+  <div class="collection">
+    <div class="image-container" *ngFor="let image of Pictures; let i = index">
+      <img
+        class="image"
+        [lazyLoad]="image.mediaURL"
+        alt="Photo Image"
+        (click)="openModal(image.mediaURL, i)"
+      />
+    </div>
+  </div>
+
+  <!-- Next steps:
+        -    Make it so that you click and it opens in new modal where it has fullscreen view
+         -->
 </h2>
+<!-- The modal -->
+<div class="modal" [class.open]="modalOpen">
+  <span class="close" (click)="closeModal()">&times;</span>
+  <a class="prev" (click)="prevImage()">&#10094;</a>
+  <img class="modal-content" [src]="modalImageUrl" alt="Modal Image" />
+  <a class="next" (click)="nextImage()">&#10095;</a>
+</div>

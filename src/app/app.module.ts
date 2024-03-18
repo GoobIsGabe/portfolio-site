@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,8 @@ import { MainModalComponent } from './components/main-modal/main-modal.component
 import { AboutComponent } from './pages/about/about.component';
 import { TellMoreButtonComponent } from './components/tell-more-button/tell-more-button.component';
 import { ProjectsComponent } from './pages/full-stack/projects/projects.component';
-
+import { CommaSeparatorPipe } from './pipes/comma-separator.pipe';
+import { NavHelpComponent } from './components/nav-help/nav-help.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,10 +29,13 @@ import { ProjectsComponent } from './pages/full-stack/projects/projects.componen
     AboutComponent,
     TellMoreButtonComponent,
     ProjectsComponent,
+    CommaSeparatorPipe,
+    NavHelpComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LazyLoadImageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

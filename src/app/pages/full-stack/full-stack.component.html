@@ -1,79 +1,23 @@
 <!-- Module for contents -->
-
+<div class="back">
+    <h1><a routerLink="/home" title="Go Back">&#171;</a></h1>
+</div>
 <h1 class="name-heading">
     <span class="cyan">Full-Stack Development</span>
 </h1>
 <h2 class="sub-headers">
-    <span class="satin">I am a <div class="cyan">motivated</div> full-stack developer that has strong passion for
+    <span class="paragraph">I am a <div class="cyan">motivated</div> full-stack developer that has strong passion for
         creating effective, and <div class="cyan">innovative</div> code.
         My talents with <div class="cyan">Java</div> paired with a background in web and <div class="cyan">graphic
             design</div> allow me to deliver results that are <div class="cyan">high quality</div>, and meet
         standards.</span>
     <div class="works">
-        <a (click)="toggleWorksContent()">
+        <a routerLink="/development/works">
             My Works...
             <div class="arrow">
-                ᐁ
+                &#187;
             </div>
         </a>
-    </div>
-    <div class="works-content" [ngClass]="{'visible': showWorksContent}">
-        <section class="project">
-            <div class="sub-header" #worksContent>Speedrun Tracker -</div>
-            <div class="description">
-                This project serves online speedrunners by allowing them to
-                display their splits or times in a customizable HTML document. It utilizes TheRun.gg API, parsing JSON
-                data,
-                and can trigger actions on a local bot named Streamer.bot, with conditional support for special events.
-            </div>
-
-            <div class="techs">
-                Technologies used: C#, Javascript, HTML, CSS, Websockets, OBS RAW.
-            </div>
-            <div class="resources">
-                Video: <br>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/pSom3BJ3-78?si=R2XoMMcG7SwRIxSD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <br>
-        </section>
-        <section class="project">
-            <div class="sub-header">NGO Donation Portal -</div>
-            <div class="description">
-                This is a donation portal web application with JWT token authentication where users can
-                create donors to contribute to set events which can be recurring or one time.</div>
-            <div class="techs">
-                Technologies used: Java, Angular, JWT, Spring Boot, PostgreSQL, TypeScript, Angular Material, Git
-            </div>
-            <br>
-        </section>
-        <section class="project">
-        <div class="sub-header">Revature Community -</div>
-        <div class="description">
-            Created a platform for employees to post or ask questions about locations, focusing on
-            categories like Housing, Entertainment, Food, and Events.</div>
-        <div class="techs">
-            Technologies used: Angular 10, Spring Framework, Hibernate, Java, HTML, CSS, JavaScript,
-            Maven, AWS
-        </div>
-        <br>
-        </section>
-        <section class="project">
-        <div class="sub-header">GameHub -</div>
-        <div class="description">
-            Developed a social platform for users to showcase their gaming progression, interests, and
-            achievements.</div>
-        <div class="techs">
-            Technologies used: Angular, Java, HTML, CSS, JavaScript, AWS RDS, PostgreSQL
-        </div>
-        <br>
-        <div class="sub-header">Expense Reimbursement System (ERS) -</div>
-        <div class="description">
-            Designed a system for managing employee expense reimbursements, enabling users to submit
-            requests and finance managers to approve or deny them.</div>
-        <div class="techs">
-            Technologies used: Java, MSA, HTML, CSS, JavaScript, AWS RDS, PostgreSQL
-        </div>
-        </section>
     </div>
 
 </h2>

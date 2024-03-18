@@ -1,1 +1,35 @@
-<p>projects works!</p>
+<div class="back">
+    <h1><a routerLink="/development" title="Go Back">&#171;</a></h1>
+</div>
+<div class="project-content" *ngFor="let project of Projects">
+    <h1 class="name-heading">
+        <span class="cyan">{{project.name}}</span>
+    </h1>
+    <h2 class="description">
+        {{project.description}}
+    </h2>
+    <h3 class="techs">Technologies Used: {{project.technologies | commaSeparator}}</h3>
+    <a href="{{project.projectURL}}" target="_blank" class="git">Github Repo</a>
+    <div *ngIf="project.videoURL">
+        <iframe width="500" height="315" [src]="getEmbeddedVideoUrl(project.videoURL)" title="Embedded Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+    </div>
+    <div *ngIf="project.media" class="image-container">
+        <div *ngFor="let image of project.media" (click)="openModal(image)">
+            <img class="project-image" [lazyLoad]="image" alt="Project Image" />
+        </div>
+    </div>
+    
+    <!-- Modal container -->
+    <div *ngIf="modalOpen"  class="modal">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <img class="modal-content" [src]="selectedImage" alt="Expanded Image" />
+    </div>
+    
+    
+
+
+</div>

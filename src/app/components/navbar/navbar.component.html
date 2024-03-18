@@ -2,7 +2,7 @@
 <div class="nav-container">
     <!-- Display navigation links only if it's not a small screen -->
     <nav *ngIf="!isSmallScreen">
-        <div class="circle cyan" [routerLink]="['/development']" [class.active]="isRouteActive('/development')"></div>
+        <div class="circle cyan" [routerLink]="['/development']" [class.active]="isRouteActive('/development') || isRouteActive('/development/works')"></div>
         <div class="circle magenta" [routerLink]="['/content']" [class.active]="isRouteActive('/content')"></div>
         <div class="circle yellow" [routerLink]="['/photography']" [class.active]="isRouteActive('/photography')"></div>
         <div class="circle key" [routerLink]="['/home']"
@@ -72,3 +72,4 @@
         </svg>
     </a>
 </div>
+<app-nav-help></app-nav-help>

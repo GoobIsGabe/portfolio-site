@@ -1,64 +1,66 @@
 .name-heading {
-    user-select: none;
-    font-family: "CoreMellow77CnExtraBoldW05-It", sans-serif !important;
-    font-size: 3.5em;
-    margin-bottom: -25px;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke: 2px #000;
-    position: sticky;
-    top: 0;
-    margin-top: 0;
-    background: linear-gradient(360deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 10%, rgba(255,255,255,255) 100%);
+  user-select: none;
+  font-family: "CoreMellow77CnExtraBoldW05-It", sans-serif !important;
+  font-size: 3.5em;
+  margin-bottom: -25px;
+  -webkit-text-stroke: 2px #000;
+  position: sticky;
+  margin-top: 0;
+  background: linear-gradient(
+    360deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.9) 10%,
+    rgba(255, 255, 255, 255) 100%
+  );
+}
+.back {
+  font-family: "CoreMellow77CnExtraBoldW05-It", sans-serif !important;
+  font-size: 3.5em;
+  position: absolute;
+  top: -120px;
+  left: 10px;
+  z-index: 1;
+  a {
+    text-decoration: none;
+    color: unset;
   }
-  
-  .paragraph {
-    user-select: none;
-    font-size: 2.5em;
-    font-weight: bolder;
-    -webkit-text-stroke: 1px #000000;
-    margin: 10;
-    padding: 0 0.5em 0 0.5em;
-    scroll-snap-align: start;
-    span {
-        display: block;
-    }
-    font-family: "CoreMellow37CnLightW05-Rg", sans-serif !important;
+}
+.paragraph {
+  user-select: none;
+  font-size: 2.5em;
+  -webkit-text-stroke: 1px #000000;
+  padding-left: 0.5em;
+  // scroll-margin: 10px;
+  span {
+    display: block;
   }
-  
-  .magenta {
-    -webkit-text-fill-color: magenta;
-    display: inline;
-    :visited {
-        -webkit-text-fill-color: magenta;
-    }
-  }
-    
-  .satin {
-    font-family: "CoreMellowW01-79CmXBold", sans-serif !important;
-    color: white;
-  }
+  font-family: "CoreMellow37CnLightW05-Rg", sans-serif !important;
+}
 
-  
-  .picture {
-    height: 250px;
-    min-width: 250px;
-    margin-left: 10px;
-    margin-right: 10px;
-    // margin-top: 25px;
-    content: url("/assets/images/Goobcube.webp");
-    float: right;
-  }
-  a{
-    -webkit-text-fill-color: white;
-    
-  }
-  /* Media Query for desktop appearance */
+.magenta {
+  -webkit-text-fill-color: magenta;
+}
+
+.satin {
+  font-family: "CoreMellowW01-79CmXBold", sans-serif !important;
+  color: white;
+}
+
+.picture {
+  height: 250px;
+  margin-left: 10px;
+  margin-right: 10px;
+  // margin-top: 25px;
+  content: url("/assets/images/Goobcube.webp");
+  float: right;
+}
+/* Media Query for desktop appearance */
 @media (max-width: 1100px) {
 }
 
 /* Media Query for iPad */
 @media (max-width: 768px) {
-  .paragraph{
+  .paragraph {
     font-size: 2em;
     text-align: left;
   }
@@ -66,18 +68,22 @@
 
 /* Media Query for phones */
 @media (max-width: 500px) {
-  .name-heading{
+  .name-heading {
     font-size: 2.5em;
   }
-  .header{
+  .header {
     margin-left: 40px;
   }
-  .paragraph{
+  .paragraph {
     font-size: 1.5em;
     text-align: left;
   }
   .picture {
     height: 150px;
     min-width: unset;
+  }
+  .back {
+    font-size: 3em;
+    margin-top: 10px;
   }
 }
