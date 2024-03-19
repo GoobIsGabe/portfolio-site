@@ -10,10 +10,12 @@
     color: unset;
   }
 }
+
 .name-heading {
+  padding-top: 20px;
   user-select: none;
-  font-family: "CoreMellow77CnExtraBoldW05-It", sans-serif !important;
-  font-size: 3.5em;
+  font-family: "CoreMellowW01-79CmXBold", sans-serif !important;
+  font-size: 3em;
   margin-bottom: -25px;
   margin-top: 0px;
   -webkit-text-stroke: 2px #000;
@@ -63,6 +65,16 @@
   height: 100%; /* Ensure images fill their container */
   object-fit: cover; /* Maintain aspect ratio and cover the container */
   cursor: pointer;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 10px;
+  transition: transform 0.3s;
+}
+
+.opened {
+  transform: rotate(90deg);
 }
 
 

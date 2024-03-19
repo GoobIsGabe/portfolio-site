@@ -1,0 +1,76 @@
+.back {
+    font-family: "CoreMellow77CnExtraBoldW05-It", sans-serif !important;
+    font-size: 3.5em;
+    position: absolute;
+    top: -120px;
+    left: 10px;
+    z-index: 1;
+  }
+  .name-heading {
+    font-family: "CoreMellow77CnExtraBoldW05-It", sans-serif !important;
+    font-size: 3.5em;
+    margin-bottom: -25px;
+    margin-top: 0px;
+    -webkit-text-stroke: 2px #000;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(
+      360deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.9) 10%,
+      rgba(255, 255, 255, 255) 100%
+    );
+  }
+  
+  .sub-headers {
+    font-size: 2.5em;
+    -webkit-text-stroke: 1px #000000;
+    span {
+      display: block;
+    }
+    font-family: "CoreMellow37CnLightW05-Rg", sans-serif !important;
+  }
+  a {
+    color: unset;
+    text-decoration: none;
+  }
+  .yellow {
+    -webkit-text-fill-color: yellow;
+    display: inline;
+  }
+  
+  .works {
+    margin-top: 2em;
+    cursor: pointer;
+  }
+  .arrow{
+    font-size: 2.5em;
+    margin-top: -0.5em;
+  }
+  .paragraph {
+    font-family: "CoreMellowW01-79CmXBold", sans-serif !important;
+    color: white;
+  }
+  
+  /* Media Query for phones */
+  @media (max-width: 500px) {
+    .name-heading {
+      font-size: 2.5em;
+      padding-left: 50px;
+    }
+    .back {
+      font-size: 3em;
+      margin-top: 10px;
+    }
+    .header {
+      margin-left: 40px;
+    }
+    .paragraph {
+      font-size: 0.75em;
+      text-align: left;
+    }
+    .picture {
+      height: 150px;
+    }
+  }
+  

@@ -1,12 +1,14 @@
 <div class="back">
   <h1><a routerLink="/home" title="Go Back">&#171;</a></h1>
 </div>
-<h1 class="name-heading">
-  <span class="yellow">Other Works</span>
+<h1 class="name-heading collapsible" (click)="toggleCollapsible()">
+  <span class="yellow">Photography</span>
+  <span class="arrow yellow"> > </span>
 </h1>
 <h2 class="sub-headers">
+  <div class="content">
   <!-- This would need to have its own collection loop for each collection -->
-  <div class="collection">
+  <div class="collection" *ngIf="isCollapsibleOpen">
     <div class="image-container" *ngFor="let image of Pictures; let i = index">
       <img
         class="image"
@@ -16,10 +18,7 @@
       />
     </div>
   </div>
-
-  <!-- Next steps:
-        -    Make it so that you click and it opens in new modal where it has fullscreen view
-         -->
+</div>
 </h2>
 <!-- The modal -->
 <div class="modal" [class.open]="modalOpen">

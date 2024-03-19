@@ -11,10 +11,10 @@ import { Photo } from 'src/app/models/photos';
 export class PhotographerComponent {
 
   modalImageUrl: string | undefined;
-  modalCaption: string | undefined;
   modalOpen: boolean = false;
   currentIndex: number = 0;
-
+  isCollapsibleOpen: boolean = false;
+  
   Pictures: Photo[] =[
     //         Collections        MediaURL
     new Photo(["Park", "Nature"],"/assets/images/Photography/Park/1.webp"),
@@ -31,6 +31,17 @@ export class PhotographerComponent {
     new Photo(["Park", "Nature"],"/assets/images/Photography/Park/13.webp"),
     new Photo(["Park", "Nature"],"/assets/images/Photography/Park/14.webp"),    
   ]
+  toggleCollapsible(): void {
+    this.isCollapsibleOpen = !this.isCollapsibleOpen;
+    const arrowIcon = document.querySelector('.arrow');
+    if (this.isCollapsibleOpen) {
+      arrowIcon?.classList.add('opened');
+      this.closeModal();
+    } else {
+      arrowIcon?.classList.remove('opened');
+    }
+  }
+  
 
   openModal(imageUrl: string, index:number): void {
     this.modalImageUrl = imageUrl;
@@ -46,8 +57,8 @@ export class PhotographerComponent {
 
   prevImage(): void {
     if (this.currentIndex > 0) {
-      this.currentIndex--; // Decrement the current index
-      this.modalImageUrl = this.Pictures[this.currentIndex].mediaURL; // Update modal image URL
+      this.currentIndex--;
+      this.modalImageUrl = this.Pictures[this.currentIndex].mediaURL; 
     }
     else{
       this.currentIndex=this.Pictures.length - 1;
@@ -58,7 +69,7 @@ export class PhotographerComponent {
   nextImage(): void {
     if (this.currentIndex < this.Pictures.length - 1) {
       this.currentIndex++; // Increment the current index
-      this.modalImageUrl = this.Pictures[this.currentIndex].mediaURL; // Update modal image URL
+      this.modalImageUrl = this.Pictures[this.currentIndex].mediaURL; 
     }
     else{
       this.currentIndex=0;

@@ -4,7 +4,7 @@
     <nav *ngIf="!isSmallScreen">
         <div class="circle cyan" [routerLink]="['/development']" [class.active]="isRouteActive('/development') || isRouteActive('/development/works')"></div>
         <div class="circle magenta" [routerLink]="['/content']" [class.active]="isRouteActive('/content')"></div>
-        <div class="circle yellow" [routerLink]="['/photography']" [class.active]="isRouteActive('/photography')"></div>
+        <div class="circle yellow" [routerLink]="['/other']" [class.active]="isRouteActive('/other')"></div>
         <div class="circle key" [routerLink]="['/home']"
             [class.active]="isRouteActive('/home') || isRouteActive('/about')"></div>
     </nav>
@@ -25,7 +25,7 @@
                 <div class="row magenta" [routerLink]="['/content']">
                     <p>Content Creation About</p>
                 </div>
-                <div class="row yellow" [routerLink]="['/photography']">
+                <div class="row yellow" [routerLink]="['/other']">
                     <p>Media Portfolio</p>
                 </div>
                 <div class="row key" [routerLink]="['/home']">

@@ -1,0 +1,34 @@
+  <h1 class="name-heading collapsible" (click)="toggleCollapsible()">
+    <span class="yellow">Graphic Design</span>
+    <span class="arrow2 yellow"> > </span>
+  </h1>
+  <h2 class="sub-headers">
+    <div class="content">
+    <!-- This would need to have its own collection loop for each collection -->
+    <div class="collection" *ngIf="isCollapsibleOpen">
+    <!-- Have a new model for spreadsheets?  
+        - Screenshot array
+        - Title
+        - Description
+    
+    -->
+
+      <!-- <div class="image-container" *ngFor="let image of Pictures; let i = index"> -->
+        <!-- <img
+          class="image"
+          [lazyLoad]="image.mediaURL"
+          alt="Photo Image"
+          (click)="openModal(image.mediaURL, i)"
+        /> -->
+      <!-- </div> -->
+    </div>
+  </div>
+  </h2>
+  <!-- The modal -->
+  <div class="modal" [class.open]="modalOpen">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <a class="prev" (click)="prevImage()">&#10094;</a>
+    <img class="modal-content" [src]="modalImageUrl" alt="Modal Image" />
+    <a class="next" (click)="nextImage()">&#10095;</a>
+  </div>
+  
